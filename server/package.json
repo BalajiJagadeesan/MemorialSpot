@@ -1,0 +1,74 @@
+{
+  "name": "parkserver",
+  "version": "2.0.0",
+  "description": "Data server for highland memorial park",
+  "main": ".src/index.js",
+
+  "scripts": {
+    "start": "node ./build/index.js NODE_ENV=production",
+    "build": "babel ./src -d ./build",
+    "dev-start": "nodemon --exec babel-node ./src/index.js",
+    "test": "nodemon --exec mocha --require babel-core/register ./tests/**/*.test.js",
+    "sample": "nodemon --exec babel-node ./test.js ",
+    "postinstall": "npm run build && cp -R ./src/doc/ ./build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/highlandpark/data-server.git"
+  },
+  "author": "Balaji Jagadeesan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/highlandpark/data-server/issues"
+  },
+  "standard": {
+    "env": [
+      "mocha",
+      "chai"
+    ]
+  },
+  "homepage": "https://gitlab.com/highlandpark/data-server#README",
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^9.6.5",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-chai-expect": "^1.1.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^5.1.0",
+    "nodemon": "^1.17.3"
+  },
+  "dependencies": {
+    "apollo-engine": "^0.8.8",
+    "apollo-errors": "^1.8.0",
+    "apollo-server-express": "^1.3.4",
+    "body-parser": "^1.18.2",
+    "cloudinary": "^1.11.0",
+    "compression": "^1.7.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "formidable": "^1.2.1",
+    "google-auth-library": "^1.4.0",
+    "graphql": "^0.13.2",
+    "graphql-custom-types": "^1.3.0",
+    "graphql-iso-date": "^3.5.0",
+    "graphql-tools": "^2.24.0",
+    "jsonwebtoken": "^8.2.1",
+    "lodash": "^4.17.5",
+    "moment": "^2.22.1",
+    "mongoose": "^5.0.15",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "request-ip": "^2.0.2",
+    "shortid": "^2.2.8",
+    "validator": "^9.4.1",
+    "winston": "^3.0.0-rc1"
+  }
+}
