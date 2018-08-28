@@ -67,12 +67,11 @@ For consecutive request, use the below headers in 'HTTP HEADERS' section in grap
 ```
 
 Some endpoints requires admin token.This can only be obtained through admin console application.
-I have added bdfvks@rit.edu and deblabelle16@gmail.com to the admin list.
 Please run admin console and sign in using google login credentials,
 access token and refresh tokens will be stored in localStorage under name "ACCESS_TOKEN" and "REFRESH_TOKEN"
 
 Please use the "ACCESS_TOKEN" as header to invoke admin operations.
 
-Kindly read the documentation for more information on the operations and tokens needed to access the operations
-The documentation can be accessed through the heroku endpoint "https://memorialparkserver.herokuapp.com/"
-or locally on "./src/doc/index.html"
+Kindly read the final report for more information on the operations and tokens needed to access the operations
+
+The documentation can be accessed locally on "./src/doc/index.html"
